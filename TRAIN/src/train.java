@@ -4,14 +4,19 @@ public class train {
     public static void main(String[] args) {
         System.out.println("=== Train Consist Management App ===");
 
-        HashSet<String> ids = new HashSet<>();
+        LinkedList<String> consist = new LinkedList<>();
 
-        ids.add("BG101");
-        ids.add("BG102");
-        ids.add("BG101");
-        ids.add("BG103");
-        ids.add("BG102");
+        consist.add("Engine");
+        consist.add("Sleeper");
+        consist.add("AC");
+        consist.add("Cargo");
+        consist.add("Guard");
 
-        System.out.println("Unique Bogie IDs: " + ids);
+        consist.add(2, "Pantry");
+
+        consist.removeFirst();
+        consist.removeLast();
+
+        System.out.println("Final Train Consist: " + consist);
     }
 }
