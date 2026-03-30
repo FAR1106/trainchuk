@@ -4,14 +4,14 @@ public class train {
     public static void main(String[] args) {
         System.out.println("=== Train Consist Management App ===");
 
-        LinkedHashSet<String> bogies = new LinkedHashSet<>();
+        HashMap<String, Integer> map = new HashMap<>();
 
-        bogies.add("Engine");
-        bogies.add("Sleeper");
-        bogies.add("Cargo");
-        bogies.add("Guard");
-        bogies.add("Sleeper");
+        map.put("Sleeper", 72);
+        map.put("AC Chair", 54);
+        map.put("First Class", 24);
 
-        System.out.println("Train Formation: " + bogies);
+        for (Map.Entry<String, Integer> e : map.entrySet()) {
+            System.out.println(e.getKey() + " -> " + e.getValue());
+        }
     }
 }
